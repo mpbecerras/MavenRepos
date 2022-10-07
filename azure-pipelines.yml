@@ -16,7 +16,12 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
-    codeCoverageToolOption: Cobertura
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: true 
+    goals: 'package'
+    
 
 - task: CopyFiles@2
   inputs:
